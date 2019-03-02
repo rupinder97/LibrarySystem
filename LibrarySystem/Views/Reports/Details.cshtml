@@ -1,0 +1,58 @@
+﻿@model LibrarySystem.Report
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Report</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NumOfAvailableItems)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumOfAvailableItems)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumOfBorroersItems)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumOfBorroersItems)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumOfOverdueItems)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumOfOverdueItems)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumOfBorrowes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumOfBorrowes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumOfStaff)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumOfStaff)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,75 @@
+﻿@model IEnumerable<LibrarySystem.Library>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Libraries</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ItemType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Author)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Edition)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ISBNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ItemStatus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LibraianDetails)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StaffDetails)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ItemType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Author)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Edition)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ISBNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ItemStatus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LibraianDetails)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StaffDetails)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Itemid }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Itemid }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Itemid })
+        </td>
+    </tr>
+}
+
+</table>

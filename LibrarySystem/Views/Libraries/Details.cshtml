@@ -1,0 +1,82 @@
+﻿@model LibrarySystem.Library
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Library</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ItemType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ItemType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Author)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Author)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Edition)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Edition)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ISBNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ISBNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ItemStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ItemStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LibraianDetails)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LibraianDetails)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StaffDetails)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StaffDetails)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Itemid }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

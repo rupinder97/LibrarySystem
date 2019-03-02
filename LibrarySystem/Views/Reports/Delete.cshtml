@@ -1,0 +1,64 @@
+﻿@model LibrarySystem.Report
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Report</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NumOfAvailableItems)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumOfAvailableItems)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumOfBorroersItems)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumOfBorroersItems)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumOfOverdueItems)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumOfOverdueItems)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumOfBorrowes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumOfBorrowes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumOfStaff)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumOfStaff)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
